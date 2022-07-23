@@ -22,7 +22,7 @@ function BandCard({ bandObj, onUpdate }) {
           <Button variant="outline-primary" className="m-2">VIEW</Button>
         </Link>
         <Link href={`/band/edit/${bandObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
+          <Button variant="outline-info">EDIT</Button>
         </Link>
         <Button variant="outline-danger" onClick={deleteBandAndChangeState} className="m-2">
           DELETE
