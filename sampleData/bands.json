@@ -1,0 +1,20 @@
+{
+  "-M3BsfuTafEEQ7eAULxh": {
+    "firebaseKey": "-M3BsfuTafEEQ7eAULxh",
+    "name": "Tedeschi Trucks Band",
+    "genre": "Blues, Roots",
+    "homepage": "https://www.https://www.tedeschitrucksband.com/",
+    "active": true,
+    "imageURL": "https://media.npr.org/assets/img/2016/03/10/tedeschi-trucks-band-credit-tedeschi-trucks-band_sq-ae050e46034eb66c843e5c360698c6db11c1d687-s800-c85.jpg",
+    "uid": "f7bStmBppsRiZU3fUu5Q5ZVifT62"
+  },
+  "-M7Bt86VzkC-EGmDnxj6": {
+    "firebaseKey": "-M7Bt86VzkC-EGmDnxj6",
+    "name": "Vulfpeck",
+    "genre": "Funk",
+    "homepage": "https://www.vulfpeck.com",
+    "active": true,
+    "imageURL": "https://relix.com/wp-content/uploads/2019/09/Vulfpeck-Madison-Square-Garden-Sat-9-28-19_September-28-20190028-Edit-700x466.jpg",
+    "uid": "f7bStmBppsRiZU3fUu5Q5ZVifT62"
+  }
+}

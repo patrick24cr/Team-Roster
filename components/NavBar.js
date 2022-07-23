@@ -11,7 +11,7 @@ export default function NavBar() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="navBarContainer0">
       <Container className="navBarContainer1">
         <Link passHref href="/">
-          <Navbar.Brand>Band-Aid</Navbar.Brand>
+          <Navbar.Brand>🎸 Band Aid </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -21,7 +21,7 @@ export default function NavBar() {
               <Link passHref href="/">
                 <Nav.Link>My Bands</Nav.Link>
               </Link>
-              <Link passHref href="/bands/new">
+              <Link passHref href="/band/new">
                 <Nav.Link>New Band</Nav.Link>
               </Link>
               <div className="navBarSpacer" />
