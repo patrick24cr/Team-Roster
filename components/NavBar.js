@@ -21,7 +21,7 @@ export default function NavBar() {
               <Link passHref href="/">
                 <Nav.Link>My Bands</Nav.Link>
               </Link>
-              <Link passHref href="/">
+              <Link passHref href="/bands/new">
                 <Nav.Link>New Band</Nav.Link>
               </Link>
               <div className="navBarSpacer" />
