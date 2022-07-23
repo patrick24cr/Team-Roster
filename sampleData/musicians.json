@@ -1,0 +1,90 @@
+{
+  "-MiBsfuTafbEQ7eAULxV": {
+    "email": "ta@ta.com",
+    "favorite": true,
+    "firebaseKey": "-MiBsfuTafbEQ7eAULxV",
+    "first_name": "Tomi",
+    "last_name": "Adeyemi",
+    "uid": ""
+  },
+  "-MiBt86VzkC-EGmJnxjm": {
+    "email": "ba@obama.com",
+    "favorite": true,
+    "firebaseKey": "-MiBt86VzkC-EGmJnxjm",
+    "first_name": "Barack",
+    "last_name": "Obama",
+    "uid": ""
+  },
+  "-MiBtwf1BwN9pGavQeR3": {
+    "email": "hz@zinn.com",
+    "favorite": false,
+    "firebaseKey": "-MiBtwf1BwN9pGavQeR3",
+    "first_name": "Howard",
+    "last_name": "Zinn",
+    "uid": ""
+  },
+  "-MiBuOfHv9NCKB_cneij": {
+    "email": "at@thomas.com",
+    "favorite": false,
+    "firebaseKey": "-MiBuOfHv9NCKB_cneij",
+    "first_name": "Angie",
+    "last_name": "Thomas",
+    "uid": ""
+  },
+  "-MiBulenBnY8by9Xn7q1": {
+    "email": "cw@whithead.com",
+    "favorite": false,
+    "firebaseKey": "-MiBulenBnY8by9Xn7q1",
+    "first_name": "Colson",
+    "last_name": "Whitehead",
+    "uid": ""
+  },
+  "-MiBv9_aOEJQWoobjz_U": {
+    "email": "mk@kendall.com",
+    "favorite": true,
+    "firebaseKey": "-MiBv9_aOEJQWoobjz_U",
+    "first_name": "Mikki",
+    "last_name": "Kendall",
+    "uid": ""
+  },
+  "-MiBvQiWr6XNwNa1i3-0": {
+    "email": "lm@lm.com",
+    "favorite": true,
+    "firebaseKey": "-MiBvQiWr6XNwNa1i3-0",
+    "first_name": "L.L",
+    "last_name": "McKinney",
+    "uid": ""
+  },
+  "-MiBw4tCvNZd23yTVDQw": {
+    "email": "jb@baldwin.com",
+    "favorite": false,
+    "firebaseKey": "-MiBw4tCvNZd23yTVDQw",
+    "first_name": "James",
+    "last_name": "Baldwin",
+    "uid": ""
+  },
+  "-N3bZEcMFLs8POeyuBZV": {
+    "email": "asdkfjasldkfj@sdlkfjs.com",
+    "favorite": true,
+    "firebaseKey": "-N3bZEcMFLs8POeyuBZV",
+    "first_name": "Patrick",
+    "last_name": "Burns",
+    "uid": "qojX0MVoZXX66eo9IkZrWlg7B8h2"
+  },
+  "-N3bZEcMFLs8POeyu830": {
+    "email": "asdkfjasldkfj@sdlkfjs.com",
+    "favorite": true,
+    "firebaseKey": "-N3bZEcMFLs8POeyu830",
+    "first_name": "Christopher",
+    "last_name": "Steele",
+    "uid": "qojX0MVoZXX66eo9IkZrWlg7B8h2"
+  },
+  "-N3bZEcMFLs8POeyusdf": {
+    "email": "asdkfjasldkfj@sdlkfjs.com",
+    "favorite": true,
+    "firebaseKey": "-N3bZEcMFLs8POeyusdf",
+    "first_name": "Wim",
+    "last_name": "Hoff",
+    "uid": "qojX0MVoZXX66eo9IkZrWlg7B8h2"
+  }
+}

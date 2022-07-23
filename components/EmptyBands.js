@@ -15,7 +15,7 @@ export default function EmptyBands({ displayName }) {
     >
       <h1>Hi {displayName}! </h1>
       <p>Click the button below to create a band!</p>
-      <Link passHref href="/bands/new">
+      <Link passHref href="/band/new">
         <Button variant="outline-light" type="button" size="lg" className="copy-btn">
           Get Started
         </Button>

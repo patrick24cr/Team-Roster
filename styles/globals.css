@@ -42,3 +42,7 @@ body {
 .navBarSpacer {
   flex-grow: 1;
 }
+
+.bandImage {
+  object-fit: cover;
+}
