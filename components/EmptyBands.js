@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 export default function EmptyBands({ displayName }) {
   return (
     <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
+      className="text-center d-flex flex-column justify-content-center align-content-center emptyBands"
       style={{
         padding: '30px',
         maxWidth: '500px',
