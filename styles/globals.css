@@ -19,7 +19,7 @@ a {
 }
 
 body {
-  background-color: #4b407e;
+  background-color: #352e60;
 }
 
 .navBarContainer0 {
@@ -45,4 +45,9 @@ body {
 
 .bandImage {
   object-fit: cover;
+}
+
+.bandButtons {
+  display: flex;
+  justify-content: space-between;
 }
