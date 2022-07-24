@@ -18,15 +18,14 @@ function BandCard({ bandObj, onUpdate }) {
       <Card.Body>
         <Card.Title>{bandObj.name}</Card.Title>
         <p className="card-text bold">{bandObj.active ? <span>Active<br /></span> : <span>Inactive<br /></span> }</p>
-        <Link href={`/band/${bandObj.firebaseKey}`} passHref>
-          <Button variant="outline-primary" className="m-2">VIEW</Button>
-        </Link>
-        <Link href={`/band/edit/${bandObj.firebaseKey}`} passHref>
-          <Button variant="outline-info">EDIT</Button>
-        </Link>
-        <Button variant="outline-danger" onClick={deleteBandAndChangeState} className="m-2">
-          DELETE
-        </Button>
+        <div className="bandButtons">
+          <Link href={`/band/${bandObj.firebaseKey}`} passHref>
+            <Button variant="outline-primary" className="m-2">VIEW</Button>
+          </Link>
+          <Button variant="outline-danger" onClick={deleteBandAndChangeState} className="m-2">
+            DELETE
+          </Button>
+        </div>
       </Card.Body>
     </Card>
   );
