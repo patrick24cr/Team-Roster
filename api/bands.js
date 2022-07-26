@@ -52,6 +52,33 @@ const viewBandDetails = (bandFirebaseKey, uid) => new Promise((resolve, reject) 
     }).catch((error) => reject(error));
 });
 
+const deleteSingleMember = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/members/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
+
+const createMember = (memberObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/members.json`, memberObj)
+    .then((response) => {
+      const payload = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/members/${response.data.name}.json`, payload)
+        .then(resolve);
+    }).catch(reject);
+});
+
+const updateMember = (memberObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/members/${memberObj.firebaseKey}.json`, memberObj)
+    .then(resolve)
+    .catch(reject);
+});
+
+const getSingleMember = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/members/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch(reject);
+});
+
 export {
   getBands,
   deleteSingleBand,
@@ -59,4 +86,8 @@ export {
   viewBandDetails,
   createBand,
   updateBand,
+  deleteSingleMember,
+  createMember,
+  updateMember,
+  getSingleMember,
 };

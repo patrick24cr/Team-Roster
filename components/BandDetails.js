@@ -3,8 +3,15 @@ import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
+import { deleteSingleMember } from '../api/bands';
 
-export default function BandDetails({ bandDetails }) {
+export default function BandDetails({ bandDetails, onUpdate }) {
+  const deleteMemberAndChangeState = (index) => {
+    if (window.confirm(`Delete ${bandDetails.members[index].name}?`)) {
+      deleteSingleMember(bandDetails.members[index].firebaseKey).then(() => onUpdate());
+    }
+  };
   return (
     <>
       <div className="mt-5 d-flex flex-wrap">
@@ -22,21 +29,27 @@ export default function BandDetails({ bandDetails }) {
             Band Homepage: <a href={bandDetails.homepage}>{bandDetails.homepage}</a>
           </p>
           <p>Members listed: {bandDetails.members?.length}</p>
-          {console.warn(bandDetails)}
           <div>
-            <Button variant="outline-light" className="m-2 bandDetailsButton">
-              Edit Details
-            </Button>
+            <Link href={`/member/edit/${bandDetails.firebaseKey}`} passHref>
+              <Button variant="outline-light" className="m-2 bandDetailsButton">
+                Edit Details
+              </Button>
+            </Link>
           </div>
-          <Button variant="outline-light" className="m-2 bandDetailsButton">
-            Add Member
-          </Button>
+          <div>
+            <Link href={`/member/new/${bandDetails.firebaseKey}`} passHref>
+              <Button variant="outline-light" className="m-2 bandDetailsButton">
+                Add Member
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="memberList">
         <ListGroup>
-          {bandDetails.members?.map((member) => (
+          {bandDetails.members?.map((member, index) => (
             <ListGroup.Item
+              key={member.name}
               as="li"
               className="d-flex justify-content-between align-items-start memberListItem"
             >
@@ -44,10 +57,12 @@ export default function BandDetails({ bandDetails }) {
                 <div className="fw-bold">{member.name}</div>
                 on {member.instrument}
               </div>
-              <Button variant="outline-light" className="m-2">
-                Edit
-              </Button>
-              <Button variant="outline-light" className="m-2">
+              <Link href={`/member/edit/${bandDetails.members[index].firebaseKey}`} passHref>
+                <Button variant="outline-light" className="m-2">
+                  Edit
+                </Button>
+              </Link>
+              <Button variant="outline-light" className="m-2" onClick={() => deleteMemberAndChangeState(index)}>
                 Delete
               </Button>
             </ListGroup.Item>
@@ -67,7 +82,30 @@ BandDetails.propTypes = {
     firebaseKey: PropTypes.string,
     imageURL: PropTypes.string,
     uid: PropTypes.string,
-    members: PropTypes.arrayOf(PropTypes.string),
-  }).isRequired,
-  // onUpdate: PropTypes.func.isRequired,
+    members: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      instrument: PropTypes.string,
+      firebaseKey: PropTypes.string,
+      band: PropTypes.string,
+    })),
+  }),
+  onUpdate: PropTypes.func.isRequired,
+};
+
+BandDetails.defaultProps = {
+  bandDetails: PropTypes.shape({
+    name: '',
+    genre: '',
+    active: true,
+    homepage: '',
+    firebaseKey: '',
+    imageURL: '',
+    uid: '',
+    members: PropTypes.arrayOf(PropTypes.shape({
+      name: '',
+      instrument: '',
+      firebaseKey: '',
+      band: '',
+    })),
+  }),
 };

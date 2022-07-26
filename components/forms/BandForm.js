@@ -66,7 +66,7 @@ function BandForm({ obj }) {
         id="active"
         name="active"
         label="Are they currently active?"
-        checked={formInput.sale}
+        checked={formInput.active}
         onChange={(e) => setFormInput((prevState) => ({
           ...prevState,
           active: e.target.checked,
