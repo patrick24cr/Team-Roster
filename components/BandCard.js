@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
-import { deleteSingleBand } from '../api/bands';
+import { deleteBandAndMembers } from '../api/bands';
 
 function BandCard({ bandObj, onUpdate }) {
   const deleteBandAndChangeState = () => {
     if (window.confirm(`Delete ${bandObj.name}?`)) {
-      deleteSingleBand(bandObj.firebaseKey).then(() => onUpdate());
+      deleteBandAndMembers(bandObj.firebaseKey).then(() => onUpdate());
     }
   };
 

@@ -36,17 +36,14 @@ const getSingleBand = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getBandMembers = (bandFirebaseKey, uid) => new Promise((resolve, reject) => {
+const getBandMembers = (bandFirebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/members.json?orderBy="band"&equalTo="${bandFirebaseKey}"`)
-    .then((response) => {
-      const filteredResponse = Object.values(response.data).filter((item) => item.uid === uid);
-      resolve(filteredResponse);
-    })
+    .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
 
-const viewBandDetails = (bandFirebaseKey, uid) => new Promise((resolve, reject) => {
-  Promise.all([getSingleBand(bandFirebaseKey), getBandMembers(bandFirebaseKey, uid)])
+const viewBandDetails = (bandFirebaseKey) => new Promise((resolve, reject) => {
+  Promise.all([getSingleBand(bandFirebaseKey), getBandMembers(bandFirebaseKey)])
     .then(([bandObject, bandMembersArray]) => {
       resolve({ ...bandObject, members: bandMembersArray });
     }).catch((error) => reject(error));
@@ -79,6 +76,16 @@ const getSingleMember = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteBandAndMembers = (bandFirebaseKey) => new Promise((resolve, reject) => {
+  getBandMembers(bandFirebaseKey).then((membersArray) => {
+    const deleteBookPromises = membersArray.map((member) => deleteSingleMember(member.firebaseKey));
+
+    Promise.all(deleteBookPromises).then(() => {
+      deleteSingleBand(bandFirebaseKey).then(resolve);
+    });
+  }).catch((error) => reject(error));
+});
+
 export {
   getBands,
   deleteSingleBand,
@@ -90,4 +97,5 @@ export {
   createMember,
   updateMember,
   getSingleMember,
+  deleteBandAndMembers,
 };

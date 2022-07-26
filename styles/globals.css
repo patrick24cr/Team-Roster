@@ -60,6 +60,8 @@ body {
 .memberListItem {
   color: #d2cbff;
   background-color: #160d4a;
+  border-color: #524a7f;
+  border-width: 2px;
 }
 
 .bandDetailsButton {

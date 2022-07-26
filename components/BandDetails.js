@@ -26,7 +26,7 @@ export default function BandDetails({ bandDetails, onUpdate }) {
           <p>Currently {bandDetails.active ? 'active' : 'inactive'}</p>
           <p>Genre: {bandDetails.genre}</p>
           <p>
-            Band Homepage: <a href={bandDetails.homepage}>{bandDetails.homepage}</a>
+            <a href={bandDetails.homepage}>{bandDetails.homepage}</a>
           </p>
           <p>Members listed: {bandDetails.members?.length}</p>
           <div>
