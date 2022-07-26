@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
-import { deleteSingleBand } from '../api/bands';
+import { deleteBandAndMembers } from '../api/bands';
 
 function BandCard({ bandObj, onUpdate }) {
   const deleteBandAndChangeState = () => {
     if (window.confirm(`Delete ${bandObj.name}?`)) {
-      deleteSingleBand(bandObj.firebaseKey).then(() => onUpdate());
+      deleteBandAndMembers(bandObj.firebaseKey).then(() => onUpdate());
     }
   };
 
@@ -17,13 +17,13 @@ function BandCard({ bandObj, onUpdate }) {
       <Card.Img className="bandImage" variant="top" src={bandObj.imageURL} alt={bandObj.name} style={{ height: '400px' }} />
       <Card.Body>
         <Card.Title>{bandObj.name}</Card.Title>
-        <p className="card-text bold">{bandObj.active ? <span>Active<br /></span> : <span>Inactive<br /></span> }</p>
+        <p className="card-text bold">{bandObj.genre}</p>
         <div className="bandButtons">
           <Link href={`/band/${bandObj.firebaseKey}`} passHref>
-            <Button variant="outline-primary" className="m-2">VIEW</Button>
+            <Button variant="outline-light" className="m-2">Details</Button>
           </Link>
-          <Button variant="outline-danger" onClick={deleteBandAndChangeState} className="m-2">
-            DELETE
+          <Button variant="outline-light" onClick={deleteBandAndChangeState} className="m-2">
+            Delete
           </Button>
         </div>
       </Card.Body>
