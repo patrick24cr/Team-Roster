@@ -1,0 +1,30 @@
+{
+  "-M7Bt86VzkC-EG1Dnxj2": {
+    "firebaseKey": "-M7Bt86VzkC-EG1Dnxj2",
+    "band": "-M3BsfuTafEEQ7eAULxh",
+    "name": "Derek Trucks",
+    "instrument": "Slide Guitar",
+    "uid": "f7bStmBppsRiZU3fUu5Q5ZVifT62"
+  },
+  "-M7Bt36VzfC-EGmDnxje": {
+    "firebaseKey": "-M7Bt36VzfC-EGmDnxje",
+    "band": "-M3BsfuTafEEQ7eAULxh",
+    "name": "Susan Tedeschi",
+    "instrument": "Vocals, Guitar",
+    "uid": "f7bStmBppsRiZU3fUu5Q5ZVifT62"
+  },
+  "-A7Bt86VzkC-3G1Dnxj2": {
+    "firebaseKey": "-A7Bt86VzkC-3G1Dnxj2",
+    "band": "-M7Bt86VzkC-EGmDnxj6",
+    "name": "Joe Dart",
+    "instrument": "The Joe Dart Music Man® Bass",
+    "uid": "f7bStmBppsRiZU3fUu5Q5ZVifT62"
+  },
+  "-G7Bt36VzfC-EGmDn8je": {
+    "firebaseKey": "-G7Bt36VzfC-EGmDn8je",
+    "band": "-M7Bt86VzkC-EGmDnxj6",
+    "name": "Antwaun Stanley",
+    "instrument": "Vocals",
+    "uid": "f7bStmBppsRiZU3fUu5Q5ZVifT62"
+  }
+}

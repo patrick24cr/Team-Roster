@@ -51,3 +51,12 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.memberList {
+  margin-top: 20px;
+}
+
+.memberListItem {
+  color: #d2cbff;
+  background-color: #160d4a;
+}
