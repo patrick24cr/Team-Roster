@@ -82,3 +82,7 @@ body {
   object-fit: cover;
   border-radius: 5px;
 }
+
+.formClass {
+  color: black;
+}

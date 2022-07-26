@@ -15,6 +15,21 @@ const deleteSingleBand = (firebaseKey) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+const createBand = (bandObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/bands.json`, bandObj)
+    .then((response) => {
+      const payload = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/bands/${response.data.name}.json`, payload)
+        .then(resolve);
+    }).catch(reject);
+});
+
+const updateBand = (bandObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/bands/${bandObj.firebaseKey}.json`, bandObj)
+    .then(resolve)
+    .catch(reject);
+});
+
 const getSingleBand = (firebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/bands/${firebaseKey}.json`)
     .then((response) => resolve(response.data))
@@ -42,4 +57,6 @@ export {
   deleteSingleBand,
   getSingleBand,
   viewBandDetails,
+  createBand,
+  updateBand,
 };

@@ -20,10 +20,10 @@ function BandCard({ bandObj, onUpdate }) {
         <p className="card-text bold">{bandObj.genre}</p>
         <div className="bandButtons">
           <Link href={`/band/${bandObj.firebaseKey}`} passHref>
-            <Button variant="outline-light" className="m-2">VIEW</Button>
+            <Button variant="outline-light" className="m-2">Details</Button>
           </Link>
           <Button variant="outline-light" onClick={deleteBandAndChangeState} className="m-2">
-            DELETE
+            Delete
           </Button>
         </div>
       </Card.Body>
