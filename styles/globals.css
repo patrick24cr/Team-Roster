@@ -54,6 +54,7 @@ body {
 
 .memberList {
   margin-top: 20px;
+  width: 800px;
 }
 
 .memberListItem {
@@ -61,7 +62,7 @@ body {
   background-color: #160d4a;
 }
 
-.addMemberButton {
+.bandDetailsButton {
   margin-left: 0 !important;
 }
 
