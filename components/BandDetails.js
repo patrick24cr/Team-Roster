@@ -30,7 +30,7 @@ export default function BandDetails({ bandDetails, onUpdate }) {
           </p>
           <p>Members listed: {bandDetails.members?.length}</p>
           <div>
-            <Link href={`/member/edit/${bandDetails.firebaseKey}`} passHref>
+            <Link href={`/band/edit/${bandDetails.firebaseKey}`} passHref>
               <Button variant="outline-light" className="m-2 bandDetailsButton">
                 Edit Details
               </Button>
