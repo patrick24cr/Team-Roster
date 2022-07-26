@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
 import { viewBandDetails } from '../../api/bands';
 
@@ -18,10 +19,10 @@ export default function ViewBook() {
   return (
     <>
       <div className="mt-5 d-flex flex-wrap">
-        <div className="d-flex flex-column">
-          <img src={bandDetails.imageURL} alt={bandDetails.name} style={{ width: '300px' }} />
+        <div className="d-flex flex-column bandDetailsImageDiv">
+          <img src={bandDetails.imageURL} alt={bandDetails.name} className="bandDetailsImage" />
         </div>
-        <div className="text-white ms-5 details">
+        <div className="text-white ms-5 details bandDetailsInfoDiv">
           <h5>
             {bandDetails.name}
           </h5>
@@ -33,6 +34,9 @@ export default function ViewBook() {
           </p>
           <p>Members listed: {bandDetails.members?.length}</p>
           {console.warn(bandDetails)}
+          <Button variant="outline-light" className="m-2 addMemberButton">
+            Add Member
+          </Button>
         </div>
       </div>
       <div className="memberList">
@@ -44,8 +48,14 @@ export default function ViewBook() {
             >
               <div className="ms-2 me-auto">
                 <div className="fw-bold">{member.name}</div>
-                {member.instrument}
+                on {member.instrument}
               </div>
+              <Button variant="outline-light" className="m-2">
+                Edit
+              </Button>
+              <Button variant="outline-light" className="m-2">
+                Delete
+              </Button>
             </ListGroup.Item>
           ))}
         </ListGroup>

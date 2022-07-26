@@ -20,9 +20,9 @@ function BandCard({ bandObj, onUpdate }) {
         <p className="card-text bold">{bandObj.active ? <span>Active<br /></span> : <span>Inactive<br /></span> }</p>
         <div className="bandButtons">
           <Link href={`/band/${bandObj.firebaseKey}`} passHref>
-            <Button variant="outline-primary" className="m-2">VIEW</Button>
+            <Button variant="outline-light" className="m-2">VIEW</Button>
           </Link>
-          <Button variant="outline-danger" onClick={deleteBandAndChangeState} className="m-2">
+          <Button variant="outline-light" onClick={deleteBandAndChangeState} className="m-2">
             DELETE
           </Button>
         </div>
