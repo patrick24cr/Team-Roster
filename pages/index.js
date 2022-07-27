@@ -20,7 +20,6 @@ function Home() {
   if (bands[0]) {
     return (
       <div className="d-flex flex-wrap">
-        {/* TODO: map over books here using BookCard component */}
         {bands.map((band) => (
           <BandCard key={band.firebaseKey} bandObj={band} onUpdate={getBandsDrillable} />
         ))}
