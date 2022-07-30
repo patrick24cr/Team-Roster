@@ -13,6 +13,7 @@ function Home() {
   };
   useEffect(() => {
     getBandsDrillable();
+    document.title = 'Bands';
   }, []);
   if (bands === null) {
     return <></>;
