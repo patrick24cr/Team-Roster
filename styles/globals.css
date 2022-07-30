@@ -89,3 +89,7 @@ body {
 .formClass {
   color: black;
 }
+
+#bandNameInDetails {
+  color: rgb(229, 187, 34);
+}
