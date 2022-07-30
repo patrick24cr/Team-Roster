@@ -90,6 +90,6 @@ body {
   color: black;
 }
 
-#bandNameInDetails {
+.bandNameInDetails {
   color: rgb(229, 187, 34);
 }

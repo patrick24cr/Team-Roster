@@ -55,7 +55,7 @@ export default function BandDetails({ bandDetails, onUpdate }) {
             >
               <div className="ms-2 me-auto">
                 <div className="fw-bold">{member.name}</div>
-                <div id="bandNameInDetails">on {member.instrument}</div>
+                <div className="bandNameInDetails">on {member.instrument}</div>
               </div>
               <Link href={`/member/edit/${bandDetails.members[index].firebaseKey}`} passHref>
                 <Button variant="outline-light" className="m-2">
