@@ -13,7 +13,7 @@ function Home() {
   };
   useEffect(() => {
     getBandsDrillable();
-    document.title = 'Bands';
+    document.title = 'Band Aid';
   }, []);
   if (bands === null) {
     return <></>;
